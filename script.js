@@ -36,7 +36,7 @@ all.then(()=>{
 	loadingElement.remove();
 	for (let i= 0; i<resultarray.length; i++) {
 		let resulttr= document.createElement("tr");
-		tr.innerHTML=`<td>${resultarray[i].name}</td>
+		resulttr.innerHTML=`<td>${resultarray[i].name}</td>
                      <td>${resultarray[i].time}</td>`
 		tbodyElement.append(resulttr)
 	}

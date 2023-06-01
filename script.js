@@ -1,6 +1,7 @@
 //your JS code here. If required.
 let resultarray=[];
 const loadingElement= document.createElement("tr");
+loadingElement.id="loading"
 loadingElement.innerHTML=`<td colspan="2">Loading...</td>`
 const tbodyElement=document.getElementById("output");
 tbodyElement.append(loadingElement)

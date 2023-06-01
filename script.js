@@ -41,4 +41,11 @@ all.then(()=>{
                      <td>${resultarray[i].time}</td>`
 		tbodyElement.append(resulttr)
 	}
+	let totalTime=0;
+	for (let i = 0; i < resultarray.length; i++) {
+		totalTime=totalTime+resultarray[i].time;
+	}
+	let tt=document.createElement("tr");
+	tt.innerHTML=`<td>Total</td> <td>${totalTime}</td>`
+	tbodyElement.append(tt)
 })

@@ -17,7 +17,7 @@ let promise2=new Promise((resolve,reject)=>{
 	setTimeout(()=>{
 		resolve()
 		let end2=new Date().getTime();
-		appendfunc(promise2,(end1-start1)/1000)
+		appendfunc(promise2,(end2-start2)/1000)
 	},2000)
 })
 let start3=new Date().getTime();
@@ -25,19 +25,19 @@ let promise3= new Promise((resolve,reject)=>{
 	setTimeout(()=>{
 		resolve()
 		let end3=new Date().getTime();
-		appendfunc(promise3,(end1-start1)/1000)
+		appendfunc(promise3,(end3-start3)/1000)
 	},3000)
 })
 function appendfunc(name,time) {
 	resultarray.push({name, time})
 }
-let all=Promise.all([prom1,prom2,prom3]);
+let all=Promise.all([promise1,promise2,promise3]);
 all.then(()=>{
 	loadingElement.remove();
 	for (let i= 0; i<resultarray.length; i++) {
 		let resulttr= document.createElement("tr");
-		tr.innerHTML=`<td>`${resultarray[i].name}`</td>
-                     <td>`${resultarray[i].time}`</td>`
+		tr.innerHTML=`<td>${resultarray[i].name}</td>
+                     <td>${resultarray[i].time}</td>`
 		tbodyElement.append(resulttr)
 	}
 })
